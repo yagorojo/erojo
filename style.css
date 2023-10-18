@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@900&display=swap");
+
+:root {
+  --link: #ffffff;
+  --acc: #bc956a;
+  --bg: #2b2b2b;
+  --fg: #999;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 1.25rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1500' preserveAspectRatio='none' viewBox='0 0 1920 1500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1071%26quot%3b)' fill='none'%3e%3cpath d='M974.9 1535.6C1203.62 1271.16 1033.42 235.75 1414.56 208.01 1795.71 180.27 2034.91 740.45 2293.89 763.01' stroke='rgba(188%2c 149%2c 106%2c 0.5803921568627451)' stroke-width='2'%3e%3c/path%3e%3cpath d='M955.6 1585.37C1130.98 1505.13 961.91 1024.95 1387.88 946.4 1813.85 867.85 2002.18 454.93 2252.44 436.4' stroke='rgba(188%2c 149%2c 106%2c 0.5803921568627451)' stroke-width='2'%3e%3c/path%3e%3cpath d='M788.77 1537.83C972.45 1527.07 1020.37 1257.87 1437.29 1189.87 1854.22 1121.87 1850.78 524.21 2085.82 454.87' stroke='rgba(188%2c 149%2c 106%2c 0.5803921568627451)' stroke-width='2'%3e%3c/path%3e%3cpath d='M1008.26 1560.41C1264.73 1447.21 1183.95 775.01 1646.66 638.52 2109.37 502.03 2080.95 145.76 2285.06 113.52' stroke='rgba(188%2c 149%2c 106%2c 0.5803921568627451)' stroke-width='2'%3e%3c/path%3e%3cpath d='M716.34 1552.75C866.85 1507.09 733.59 1139.84 1128.91 1077.77 1524.23 1015.7 1708.61 561.06 1954.04 537.77' stroke='rgba(188%2c 149%2c 106%2c 0.5803921568627451)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1071'%3e%3crect width='1920' height='1500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  position: relative;
+  color: var(--link);
+  font-weight: bold;
+  margin: 0 3px;
+  z-index: 1;
+}
+
+.link::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+  background-color: var(--acc);
+
+  transition: 0.2s;
+  z-index: -1;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.svg-btn {
+  display: block;
+  border-radius: 12px;
+  background-color: #353535;
+  display: flex;
+  width: fit-content;
+  padding: 3px;
+
+  transition: 0.1s;
+}
+
+.svg-btn:hover {
+  transform: scale(1.01);
+}
+
+section {
+  padding: 2rem 1.25rem;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  background-color: var(--bg);
+  padding: 1rem;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.title {
+  font-size: 2rem;
+  color: white;
+  font-family: "Merriweather", serif;
+}
+
+.presentation {
+  max-width: 450px;
+  line-height: 1.5;
+}
+
+.small {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: var(--acc);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project {
+  color: var(--fg);
+  border-radius: 12px;
+  background-color: #353535;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  transition: 0.1s;
+}
+
+.project-img {
+  padding: 6px;
+  background-color: var(--bg);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-desc {
+  font-size: 1rem;
+  padding-top: 6px;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  section {
+    text-align: justify;
+  }
+}
